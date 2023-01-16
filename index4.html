@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задание 4</h1>
+    <input type="text" data-length="4">
+    <input type="text" data-length="7">
+    <input type="text" data-length="9">
+    <h2><a href="index3.html"><<< Предыдущее задание</a></h2>
+    <script>
+        let getInput = document.querySelectorAll('input');
+
+        for (let i = 0; i<getInput.length; i++) {
+            getInput[i].addEventListener('blur', func);
+        }
+
+        function func() {
+            if (Number(this.dataset.length) === Number(this.value.length)) {
+                this.style.border = '3px solid green';
+            } else {
+                this.style.border = '3px solid red';
+            }
+        }
+    </script>
+</body>
+</html>

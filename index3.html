@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задание 3</h1>
+    <p>2</p>
+    <p>4</p>
+    <p>6</p>
+    <h2><a href="index4.html">Следующее задание >>></a></h2>
+    <h2><a href="index2.html"><<< Предыдущее задание</a></h2>
+    <script>
+        let getP = document.querySelectorAll('p');
+
+        for (let i = 0; i < getP.length; i++) {
+           getP[i].addEventListener('click', func);
+        }
+
+        function func () {
+            this.innerHTML = Number(this.innerHTML) * Number(this.innerHTML);
+        }
+    </script>
+</body>
+</html>

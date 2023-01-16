@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Задание 2</h1>
+    <input type="text" value="1">
+    <input type="text" value="2">
+    <input type="text" value="3">
+    <h2><a href="index3.html">Следующее задание >>></a></h2>
+    <h2><a href="index.html"><<< Предыдущее задание</a></h2>
+    <script>
+        let elems = document.querySelectorAll('input');
+        for (let i = 0; i<elems.length; i++){
+            elems[i].addEventListener('click', func);
+        }
+
+        function func() {
+            alert(this.value);
+            this.removeEventListener('click', func)
+        }
+    </script>
+
+</body>
+</html>
